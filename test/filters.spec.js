@@ -27,7 +27,7 @@ describe("Filter items in catalog.", () => {
 
     const numberOfFilters = await catalogPage.countFilters();
 
-    await this.driver.quit();
+    await catalogPage.driver.quit();
 
     expect(numberOfFilters).to.be.equal(expectedNumberOfFilters);
   }).timeout(50000);
@@ -47,7 +47,7 @@ describe("Filter items in catalog.", () => {
 
     const filtersHTML = await catalogPage.getFiltersHTML();
 
-    await this.driver.quit();
+    await catalogPage.driver.quit();
 
     expect(filtersHTML).to.be.equal(emptyFiltersHTML);
   }).timeout(50000);
